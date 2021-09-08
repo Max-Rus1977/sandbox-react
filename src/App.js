@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Hello from './components/Hello';
+import Modal from './components/UI/modal/Modal';
+import MyButton from './components/UI/button/MyButton';
+
+
+import './styles/App.css';
 
 function App() {
+
+  const [modalActiv, setModalActiv] = useState(true);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Hello name='Кузя'></Hello>
+      <Hello name='Петя'>
+        <div>Test</div>
+      </Hello>
+      <Modal />
+      <MyButton btnText='НАЖАТЬ' />
     </div>
   );
 }
