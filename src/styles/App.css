@@ -1,1 +1,212 @@
+/*Обнуление*/
 
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  /*height: 100%;*/
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 18px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+/** Grids **/
+
+.df {
+  display: flex;
+}
+
+.dfJc-center {
+  display: flex;
+  justify-content: center;
+}
+
+.dfAi-center {
+  display: flex;
+  align-items: center;
+}
+
+.dfAiJc-Center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.ta-center {
+  text-align: center;
+}
+
+/**  **/
+
+.header {
+  width: 100%;
+  height: 80px;
+  margin-bottom: 15px;
+  background-color: green;
+}
+
+.navigtion-col {
+  width: 180px;
+  min-height: calc(90vh - 80px);
+  padding: 80px 15px 0 30px;
+  background-color: green;
+  border: 1px solid silver;
+}
+
+.navigtion-col li+li {
+  margin-top: 15px;
+}
+
+.navigtion-col li .active {
+  color: gold;
+}
+
+.navigtion-col a {
+  color: #1212c3;
+}
+
+.main-col {
+  width: calc(100% - 180px);
+  ;
+  padding: 50px 0 0 20px;
+}
+
+.pag-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.box-p {
+  width: 400px;
+  height: 50px;
+  margin: 0 auto;
+  background-color: blue;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.replace-backg {
+  background-color: red;
+  color: #000;
+}
+
+.box__btn-addClass {
+  margin-top: 50px;
+}
+
+.btn {
+  min-width: 100px;
+  padding: 10px 15px;
+  background-color: #10107b;
+  font-size: 15px;
+  font-weight: 900;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.btn:active {
+  transform: scale(0.99);
+  box-shadow: inset 0px 0px 5px 1px rgb(255 255 255);
+}
+
+.box-modal {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgb(148 150 157 / 75%);
+  transform: scale(0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.visibl-js {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.modal-body {
+  background-color: #fff;
+  padding: 50px;
+}
+
+.btn-ModalWidow {
+  margin-top: 20px;
+}
+
+/** disc **/
+
+.discript li+li {
+  margin-top: 10px;
+}
+
+.discript {
+  margin-top: 50px;
+}
+
+.discript span {
+  font-weight: bold;
+}

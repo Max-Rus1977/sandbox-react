@@ -1,30 +1,27 @@
-import React, { useState } from 'react';
-import Hello from './components/Hello';
-import LoremComponent from './components/LoremComponent';
-import Modal from './components/UI/modal/Modal';
-// import MyButton from './components/UI/button/MyButton';
+import React from 'react';
+import Atribut from './components/Atribut';
+import Header from './components/Header';
+import Navigation from './components/Navigation';
+import AddClass from './components/AddClass';
+import ModalWidow from './components/ModalWidow';
 
-
+import { BrowserRouter, Route } from 'react-router-dom';
 import './styles/App.css';
 
 function App() {
 
-  const [modalActiv, setModalActiv] = useState(false);
-
   return (
-    <div className="App">
-      <Hello name='Кузя'></Hello>
-      <Hello name='Петя'>
-        <div>Test</div>
-      </Hello>
-      <Modal />
-      <LoremComponent>
-        <button onClick={() => setModalActiv(true)}>
-          Click mi!
-        </button>
-      </LoremComponent>
-      {/* <MyButton active={modalActiv} setActive={setModalActiv} btnText='Модальное окно' /> */}
-    </div>
+    <BrowserRouter>
+      <div className="App row">
+        <Header />
+        <Navigation />
+        <div className='main-col'>
+          <Route path='/atribut' render={() => <Atribut />} />
+          <Route path='/addclass' render={() => <AddClass />} />
+          <Route path='/modalwidow' render={() => <ModalWidow />} />
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
