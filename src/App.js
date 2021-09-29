@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import Hello from './components/Hello';
+import LoremComponent from './components/LoremComponent';
 import Modal from './components/UI/modal/Modal';
-import MyButton from './components/UI/button/MyButton';
+// import MyButton from './components/UI/button/MyButton';
 
 
 import './styles/App.css';
 
 function App() {
 
-  const [modalActiv, setModalActiv] = useState(true);
+  const [modalActiv, setModalActiv] = useState(false);
 
   return (
     <div className="App">
@@ -17,7 +18,12 @@ function App() {
         <div>Test</div>
       </Hello>
       <Modal />
-      <MyButton btnText='НАЖАТЬ' />
+      <LoremComponent>
+        <button onClick={() => setModalActiv(true)}>
+          Click mi!
+        </button>
+      </LoremComponent>
+      {/* <MyButton active={modalActiv} setActive={setModalActiv} btnText='Модальное окно' /> */}
     </div>
   );
 }
