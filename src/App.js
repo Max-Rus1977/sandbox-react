@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Navigation from './components/Navigation';
 import AddClass from './components/AddClass';
 import ModalWidow from './components/ModalWidow';
+import AddNewPost from './components/AddNewPost';
 
 import { BrowserRouter, Route } from 'react-router-dom';
 import './styles/App.css';
@@ -19,6 +20,7 @@ function App() {
           <Route path='/atribut' render={() => <Atribut />} />
           <Route path='/addclass' render={() => <AddClass />} />
           <Route path='/modalwidow' render={() => <ModalWidow />} />
+          <Route path='/addnewpost' render={() => <AddNewPost />} />
         </div>
       </div>
     </BrowserRouter>
