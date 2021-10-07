@@ -5,6 +5,7 @@ import Navigation from './components/Navigation';
 import AddClass from './components/AddClass';
 import ModalWidow from './components/ModalWidow';
 import AddNewPost from './components/AddNewPost';
+import Selected from './components/Selected';
 
 import { BrowserRouter, Route } from 'react-router-dom';
 import './styles/App.css';
@@ -21,6 +22,7 @@ function App() {
           <Route path='/addclass' render={() => <AddClass />} />
           <Route path='/modalwidow' render={() => <ModalWidow />} />
           <Route path='/addnewpost' render={() => <AddNewPost />} />
+          <Route path='/selected' render={() => <Selected />} />
         </div>
       </div>
     </BrowserRouter>

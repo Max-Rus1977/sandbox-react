@@ -10,6 +10,7 @@ function Navigation() {
           <li><NavLink to='/addclass'>Добавление класса</NavLink></li>
           <li><NavLink to='/modalwidow'>Модальное окно</NavLink></li>
           <li><NavLink to='/addnewpost'>Добавление и удаление поста</NavLink></li>
+          <li><NavLink to='/selected'>Сортировка 'select'</NavLink></li>
         </ul>
       </nav>
     </div>

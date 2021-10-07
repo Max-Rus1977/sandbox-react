@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PagTitle from "./PagTitle";
 
 function Posts(props) {
-  //debugger
+
   return (
     <div className='wrapp-post'>
       <h3>{props.H3title}</h3>
