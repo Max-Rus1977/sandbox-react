@@ -13,6 +13,7 @@ function Navigation() {
           <li><NavLink to='/addnewpost'>Добавление и удаление поста</NavLink></li>
           <li><NavLink to='/selected'>Сортировка 'select'</NavLink></li>
           <li><NavLink to='/suick-search'>Быстрый поиск</NavLink></li>
+          <li><NavLink to='/suick-search-two'>Быстрый поиск в выпадающем спаске</NavLink></li>
         </ul>
       </nav>
     </div>

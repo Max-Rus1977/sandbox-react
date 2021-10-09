@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import PagTitle from "./PagTitle";
 
-function InputSearch({ dataValue, changeValue }) {
+function InputSearch({ dataValue, changeValue, inputClickHandler }) {
 
   return (
     <div className='box-search'>
-      <input value={dataValue} onChange={event => changeValue(event)} type="text" />
+      <input
+        type="text"
+        value={dataValue}
+        onChange={event => changeValue(event)}
+        onClick={inputClickHandler}
+      />
     </div>
   )
 }
@@ -24,7 +29,7 @@ function Product({ prise, names }) {
   )
 }
 
-function QuickSearch() {
+function QuickSearchTwo() {
 
   const [productData] = useState([
     { id: 1, prise: 1000, names: 'Джемпер' },
@@ -40,6 +45,7 @@ function QuickSearch() {
   ]);
 
   const [value, setValue] = useState('');
+  const [isOpen, setIsOpen] = useState(true);
 
   function searchChange(event) {
     setValue(event.target.value);
@@ -49,13 +55,35 @@ function QuickSearch() {
     return product.names.toLowerCase().includes(value.toLowerCase())
   })
 
+  function itemClickHandler(event) {
+    setValue(event.target.textContent);
+    setIsOpen(!isOpen)
+  }
+
+  function inputClickHandler() {
+    setIsOpen(true)
+  }
+
   return (
     <div>
       <PagTitle title='Быстрый поиск' />
       <InputSearch
         dataValue={value}
         changeValue={searchChange}
+        inputClickHandler={inputClickHandler}
       />
+      {value && isOpen
+        ? <ul className='search-list'>
+          {filterProduct.map(data =>
+            <li
+              key={data.id}
+              onClick={itemClickHandler}
+            >{data.names}</li>
+          )}
+
+        </ul>
+        : null
+      }
       <div className="box-product">
         {filterProduct.map(data =>
           <Product
@@ -70,4 +98,4 @@ function QuickSearch() {
   )
 }
 
-export default QuickSearch;
+export default QuickSearchTwo;

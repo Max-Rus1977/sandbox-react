@@ -324,3 +324,28 @@ ul li {
   border: 1px solid silver;
   border-radius: 8px;
 }
+
+/** Search two **/
+
+.search-list {
+  width: 300px;
+  max-height: 150px;
+  margin: 0 auto;
+  padding: 15px 20px;
+  background-color: #eee;
+  overflow-y: auto;
+}
+
+.search-list li {
+  padding-left: 7px;
+}
+
+.search-list li+li {
+  margin-top: 15px;
+}
+
+.search-list li:hover {
+  background-color: #686565;
+  color: #fff;
+  cursor: pointer;
+}
