@@ -6,6 +6,8 @@ import AddClass from './components/AddClass';
 import ModalWidow from './components/ModalWidow';
 import AddNewPost from './components/AddNewPost';
 import Selected from './components/Selected';
+import QuickSearch from './components/QuickSearch';
+import InputAndCounter from './components/condition/InputAndCounter';
 
 import { BrowserRouter, Route } from 'react-router-dom';
 import './styles/App.css';
@@ -20,9 +22,11 @@ function App() {
         <div className='main-col'>
           <Route path='/atribut' render={() => <Atribut />} />
           <Route path='/addclass' render={() => <AddClass />} />
+          <Route path='/input-and-counter' render={() => <InputAndCounter />} />
           <Route path='/modalwidow' render={() => <ModalWidow />} />
           <Route path='/addnewpost' render={() => <AddNewPost />} />
           <Route path='/selected' render={() => <Selected />} />
+          <Route path='/suick-search' render={() => <QuickSearch />} />
         </div>
       </div>
     </BrowserRouter>

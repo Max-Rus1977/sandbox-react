@@ -9,8 +9,10 @@ function Navigation() {
           <li><NavLink to='/atribut'>Атрибуты</NavLink></li>
           <li><NavLink to='/addclass'>Добавление класса</NavLink></li>
           <li><NavLink to='/modalwidow'>Модальное окно</NavLink></li>
+          <li><NavLink to='/input-and-counter'>Управляемый 'input' и счётчик</NavLink></li>
           <li><NavLink to='/addnewpost'>Добавление и удаление поста</NavLink></li>
           <li><NavLink to='/selected'>Сортировка 'select'</NavLink></li>
+          <li><NavLink to='/suick-search'>Быстрый поиск</NavLink></li>
         </ul>
       </nav>
     </div>

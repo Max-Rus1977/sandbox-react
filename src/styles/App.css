@@ -291,6 +291,7 @@ ul li {
   margin-bottom: 15px;
   padding-bottom: 10px;
   border: 1px solid blueviolet;
+  border-radius: 5px;
 }
 
 .product-images {
@@ -306,4 +307,20 @@ ul li {
   align-items: center;
   height: 30px;
   font-weight: 900;
+}
+
+/** Search **/
+
+.box-search {
+  display: flex;
+  justify-content: center;
+  margin: 25px auto;
+}
+
+.box-search input {
+  width: 350px;
+  padding: 10px 15px;
+  font-size: 18px;
+  border: 1px solid silver;
+  border-radius: 8px;
 }
