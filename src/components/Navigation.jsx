@@ -14,6 +14,7 @@ function Navigation() {
           <li><NavLink to='/selected'>Сортировка 'select'</NavLink></li>
           <li><NavLink to='/suick-search'>Быстрый поиск</NavLink></li>
           <li><NavLink to='/suick-search-two'>Быстрый поиск в выпадающем спаске</NavLink></li>
+          <li><NavLink to='/get-posts-server'>Получение данных с сервера "useEffect"</NavLink></li>
         </ul>
       </nav>
     </div>

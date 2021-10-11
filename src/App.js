@@ -9,6 +9,7 @@ import Selected from './components/Selected';
 import QuickSearch from './components/QuickSearch';
 import InputAndCounter from './components/condition/InputAndCounter';
 import QuickSearchTwo from './components/QuickSearchTwo';
+import GetPostsServer from './components/GetPostsServer';
 
 import { BrowserRouter, Route } from 'react-router-dom';
 import './styles/App.css';
@@ -29,6 +30,7 @@ function App() {
           <Route path='/selected' render={() => <Selected />} />
           <Route path='/suick-search' render={() => <QuickSearch />} />
           <Route path='/suick-search-two' render={() => <QuickSearchTwo />} />
+          <Route path='/get-posts-server' render={() => <GetPostsServer />} />
         </div>
       </div>
     </BrowserRouter>
